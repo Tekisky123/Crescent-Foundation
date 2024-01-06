@@ -1,0 +1,118 @@
+.main-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.main-title {
+  color: #f39473;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 1.5; /* Adjust as needed for spacing */
+}
+
+.main-desc {
+  color: #111e47;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px; /* Slightly reduced font size for better readability */
+  font-weight: 300; /* Adjust for a bolder look */
+  line-height: 1.6; /* Improved line height for better readability */
+  letter-spacing: 0.5px; /* Slightly increased letter spacing */
+  margin: 20px 0; /* Add margin for better spacing */
+  text-align: justify;
+
+}
+
+.single-card {
+  width: 90vw;
+  overflow: hidden;
+  position: relative;
+  left: 55px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.single-card:hover {
+  transform: scale(1);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s;
+}
+
+.card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.347);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.single-card:hover .card-content {
+  opacity: 1;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.636);
+  padding: 20px;
+  position: relative;
+  max-width: 500px;
+  top: 200px;
+  font-style: italic;
+  left: 800px;
+ border-radius: 10px;
+  
+}
+.card-content h2{
+  color: black;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.636);
+  padding: 20px;
+  max-width: 500px;
+  position: relative;
+  border-radius: 10px;
+  top: 200px;
+  left: 800px;
+}
+.card-content h3{
+  color: black;
+  font-size: 25px;
+  background-color: rgba(255, 255, 255, 0.636);
+  padding: 20px;
+  max-width: 500px;
+  position: relative;
+  border-radius: 10px;
+  top: 210px;
+  left: 800px;
+}
+.card-content span{
+  font-size: 18px;
+  font-weight: 100;
+  font-style: italic;
+}
+.card-content button{
+  position: relative;
+  border-radius: 8px;
+  width: 200px;
+  padding: 8px;
+  top: 210px;
+  left: 500px;
+}
+.card-content button:hover{
+  background-color: #111e47;
+  color: white;
+}

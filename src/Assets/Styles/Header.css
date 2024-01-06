@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+nav {
+  box-sizing: border-box;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  /* background: #1b1b1b; */
+  align-items: center;
+  
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+.logo-title{
+  margin-top: -20px;
+}
+nav a{
+  text-decoration: none;
+  color: #233f96;
+}
+nav .logo {
+  color: #233f96;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  margin-top: 50px;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: -40px;
+  margin-right: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 30px;
+  position: relative;
+  right: 120px;
+}
+.donate {
+  margin: 0;
+}
+.donate a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 15px;
+  letter-spacing: 1px;
+  color: white;
+  border-radius: 0;
+  background-color: #233f96;
+  transition: all 0.3s ease;
+}
+nav ul li a {
+  color: #233f96;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+
+  transition: all 0.3s ease;
+}
+
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+.menu-btn {
+  color: white;
+}
+input[type="checkbox"] {
+  display: none;
+}
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -50px;
+  width: 400px;
+  background-color:#233f96;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.dropdown-content li{
+  position: relative;
+  right: 30px;
+  width: 400px;
+  padding: 10px;
+  font-size: 8px;
+}
+.dropdown-content a{
+color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  .menu-btn {
+    color: black;
+
+    z-index: 9999;
+    position: relative;
+    bottom: 100px;
+    left: 280px;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #11111176;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
